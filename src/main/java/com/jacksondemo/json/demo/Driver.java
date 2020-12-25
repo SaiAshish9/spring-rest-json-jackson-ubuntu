@@ -12,7 +12,11 @@ public class Driver {
 			
 			ObjectMapper mapper = new ObjectMapper();
 			
-			Student theStudent = mapper.readValue(new File("data/sample-lite.json"), Student.class);
+			Student theStudent = mapper.readValue(new File("data/sample-full.json"), Student.class);
+			
+			for(String x:theStudent.getLanguages()) {
+				System.out.println(x);
+			}
 			
 			System.out.println(theStudent.getFirstName());
 			
